@@ -34,8 +34,9 @@
             this.chkShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblMaTheLoai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSignIn = new Guna.UI2.WinForms.Guna2Button();
+            this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.Panel2.SuspendLayout();
@@ -64,7 +65,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(285, 177);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Bookstore \r\nSERENETY\r\nREADS! ";
+            this.lblTitle.Text = "Nhà sách \r\nSERENETY\r\nREADS! ";
             // 
             // chkShowPass
             // 
@@ -74,11 +75,11 @@
             this.chkShowPass.CheckedState.BorderThickness = 0;
             this.chkShowPass.CheckedState.FillColor = System.Drawing.Color.SteelBlue;
             this.chkShowPass.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkShowPass.Location = new System.Drawing.Point(170, 315);
+            this.chkShowPass.Location = new System.Drawing.Point(179, 315);
             this.chkShowPass.Name = "chkShowPass";
-            this.chkShowPass.Size = new System.Drawing.Size(111, 19);
+            this.chkShowPass.Size = new System.Drawing.Size(102, 19);
             this.chkShowPass.TabIndex = 0;
-            this.chkShowPass.Text = "Show Password";
+            this.chkShowPass.Text = "Hiện mật khẩu";
             this.chkShowPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chkShowPass.UncheckedState.BorderRadius = 0;
             this.chkShowPass.UncheckedState.BorderThickness = 0;
@@ -98,6 +99,7 @@
             // 
             // Panel3
             // 
+            this.Panel3.Controls.Add(this.lblMaTheLoai);
             this.Panel3.Controls.Add(this.picLogo);
             this.Panel3.Controls.Add(this.chkShowPass);
             this.Panel3.Controls.Add(this.btnSignIn);
@@ -110,6 +112,35 @@
             this.Panel3.Size = new System.Drawing.Size(333, 481);
             this.Panel3.TabIndex = 2;
             // 
+            // lblMaTheLoai
+            // 
+            this.lblMaTheLoai.BackColor = System.Drawing.Color.Transparent;
+            this.lblMaTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaTheLoai.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblMaTheLoai.Location = new System.Drawing.Point(97, 449);
+            this.lblMaTheLoai.Name = "lblMaTheLoai";
+            this.lblMaTheLoai.Size = new System.Drawing.Size(131, 20);
+            this.lblMaTheLoai.TabIndex = 46;
+            this.lblMaTheLoai.Text = "Quên mật khẩu ?";
+            this.lblMaTheLoai.Click += new System.EventHandler(this.lblMaTheLoai_Click);
+            // 
+            // btnSignIn
+            // 
+            this.btnSignIn.BorderRadius = 20;
+            this.btnSignIn.CheckedState.Parent = this.btnSignIn;
+            this.btnSignIn.CustomImages.Parent = this.btnSignIn;
+            this.btnSignIn.FillColor = System.Drawing.Color.SteelBlue;
+            this.btnSignIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn.ForeColor = System.Drawing.Color.White;
+            this.btnSignIn.HoverState.Parent = this.btnSignIn;
+            this.btnSignIn.Location = new System.Drawing.Point(92, 357);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.ShadowDecoration.Parent = this.btnSignIn;
+            this.btnSignIn.Size = new System.Drawing.Size(140, 40);
+            this.btnSignIn.TabIndex = 3;
+            this.btnSignIn.Text = "Đăng nhập";
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            // 
             // picLogo
             // 
             this.picLogo.BackColor = System.Drawing.Color.Transparent;
@@ -121,23 +152,6 @@
             this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogo.TabIndex = 6;
             this.picLogo.TabStop = false;
-            // 
-            // btnSignIn
-            // 
-            this.btnSignIn.BorderRadius = 20;
-            this.btnSignIn.CheckedState.Parent = this.btnSignIn;
-            this.btnSignIn.CustomImages.Parent = this.btnSignIn;
-            this.btnSignIn.FillColor = System.Drawing.Color.SteelBlue;
-            this.btnSignIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.ForeColor = System.Drawing.Color.White;
-            this.btnSignIn.HoverState.Parent = this.btnSignIn;
-            this.btnSignIn.Location = new System.Drawing.Point(92, 367);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.ShadowDecoration.Parent = this.btnSignIn;
-            this.btnSignIn.Size = new System.Drawing.Size(140, 40);
-            this.btnSignIn.TabIndex = 3;
-            this.btnSignIn.Text = "Sign In";
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // txtPassword
             // 
@@ -192,7 +206,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtUserName.PlaceholderText = "Username";
+            this.txtUserName.PlaceholderText = "Tên đăng nhập";
             this.txtUserName.SelectedText = "";
             this.txtUserName.ShadowDecoration.Parent = this.txtUserName;
             this.txtUserName.Size = new System.Drawing.Size(242, 40);
@@ -227,5 +241,6 @@
         internal Guna.UI2.WinForms.Guna2TextBox txtPassword;
         internal Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private Guna.UI2.WinForms.Guna2PictureBox picLogo;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMaTheLoai;
     }
 }

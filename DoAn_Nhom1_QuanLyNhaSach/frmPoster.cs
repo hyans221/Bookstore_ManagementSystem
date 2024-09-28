@@ -17,14 +17,5 @@ namespace DoAn_Nhom1_QuanLyNhaSach
             InitializeComponent();
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel1_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -17,7 +17,10 @@ namespace DoAn_Nhom1_QuanLyNhaSach
             get { return connect; }
             set { connect = value; }
         }
-        string strConnect = "Data Source = THY; Initial Catalog = QLNhaSach; User ID =sa; Password = sa";
+
+        string strConnect = "Data Source = THY; Initial Catalog = DB_QL_NHASACH_NHOM1; User ID =sa; Password = sa";
+
+
         public DBConnect()
         {
             connect = new SqlConnection(strConnect);
@@ -73,6 +76,48 @@ namespace DoAn_Nhom1_QuanLyNhaSach
             SqlCommandBuilder cb = new SqlCommandBuilder(da_lop);
             int kq = da_lop.Update(dt);
             return kq;
+        }
+
+        public DataTable execQuery(string query)
+        {
+            DataTable data = new DataTable();
+            using (SqlConnection con = new SqlConnection(strConnect))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(data);
+                con.Close();
+            }
+            return data;
+        }
+        public int execNonQuery(String query)
+        {
+            int data = 0;
+            using (SqlConnection con = new SqlConnection(strConnect))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                data = cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            return data;
+        }
+        public object execScaler(string query)
+        {
+            object data = 0;
+            using (SqlConnection con = new SqlConnection(strConnect))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                data = cmd.ExecuteScalar();
+                con.Close();
+            }
+            return data;
+        }
+        public SqlConnection GetConnection()
+        {
+            return connect;
         }
     }
 }

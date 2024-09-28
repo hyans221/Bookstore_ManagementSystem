@@ -34,13 +34,13 @@ namespace DoAn_Nhom1_QuanLyNhaSach
 
                 if (role == "Admin")
                 {
-                    frmAdmin adminForm = new frmAdmin();
+                    frmAdmin adminForm = new frmAdmin(username, role);
                     adminForm.FormClosed += (s, args) => this.Show();
                     adminForm.Show();
                 }
                 else if (role == "NhanVien")
                 {
-                    frmTrangChu homeForm = new frmTrangChu();
+                    frmTrangChu homeForm = new frmTrangChu(username, role);
                     homeForm.FormClosed += (s, args) => this.Show();
                     homeForm.Show();
                 }
@@ -54,6 +54,14 @@ namespace DoAn_Nhom1_QuanLyNhaSach
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = !chkShowPass.Checked;
+        }
+
+        private void lblMaTheLoai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmQuenMatKhau frmQuenMatKhau = new frmQuenMatKhau();
+            frmQuenMatKhau.FormClosed += (s, args) => this.Show();
+            frmQuenMatKhau.Show();
         }
     }
 }

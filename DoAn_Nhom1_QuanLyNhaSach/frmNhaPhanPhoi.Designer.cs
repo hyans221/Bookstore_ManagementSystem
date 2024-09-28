@@ -35,6 +35,7 @@
             this.Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvNhaPhanPhoi = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLamMoi = new Guna.UI2.WinForms.Guna2Button();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
@@ -58,7 +59,7 @@
             this.Panel1.Location = new System.Drawing.Point(0, 0);
             this.Panel1.Name = "Panel1";
             this.Panel1.ShadowDecoration.Parent = this.Panel1;
-            this.Panel1.Size = new System.Drawing.Size(837, 531);
+            this.Panel1.Size = new System.Drawing.Size(991, 696);
             this.Panel1.TabIndex = 4;
             // 
             // Panel3
@@ -67,19 +68,16 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Panel3.Controls.Add(this.dgvNhaPhanPhoi);
-            this.Panel3.Location = new System.Drawing.Point(22, 260);
+            this.Panel3.Location = new System.Drawing.Point(0, 260);
             this.Panel3.Name = "Panel3";
             this.Panel3.ShadowDecoration.Parent = this.Panel3;
-            this.Panel3.Size = new System.Drawing.Size(793, 249);
+            this.Panel3.Size = new System.Drawing.Size(988, 436);
             this.Panel3.TabIndex = 1;
             // 
             // dgvNhaPhanPhoi
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvNhaPhanPhoi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvNhaPhanPhoi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNhaPhanPhoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhaPhanPhoi.BackgroundColor = System.Drawing.Color.White;
             this.dgvNhaPhanPhoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -93,7 +91,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvNhaPhanPhoi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvNhaPhanPhoi.ColumnHeadersHeight = 4;
+            this.dgvNhaPhanPhoi.ColumnHeadersHeight = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -102,14 +100,16 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvNhaPhanPhoi.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvNhaPhanPhoi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhaPhanPhoi.EnableHeadersVisualStyles = false;
             this.dgvNhaPhanPhoi.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvNhaPhanPhoi.Location = new System.Drawing.Point(26, 15);
+            this.dgvNhaPhanPhoi.Location = new System.Drawing.Point(0, 0);
             this.dgvNhaPhanPhoi.Name = "dgvNhaPhanPhoi";
             this.dgvNhaPhanPhoi.RowHeadersVisible = false;
+            this.dgvNhaPhanPhoi.RowHeadersWidth = 51;
             this.dgvNhaPhanPhoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNhaPhanPhoi.Size = new System.Drawing.Size(746, 209);
-            this.dgvNhaPhanPhoi.TabIndex = 0;
+            this.dgvNhaPhanPhoi.Size = new System.Drawing.Size(988, 436);
+            this.dgvNhaPhanPhoi.TabIndex = 1;
             this.dgvNhaPhanPhoi.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvNhaPhanPhoi.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvNhaPhanPhoi.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -123,7 +123,7 @@
             this.dgvNhaPhanPhoi.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvNhaPhanPhoi.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvNhaPhanPhoi.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvNhaPhanPhoi.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvNhaPhanPhoi.ThemeStyle.HeaderStyle.Height = 30;
             this.dgvNhaPhanPhoi.ThemeStyle.ReadOnly = false;
             this.dgvNhaPhanPhoi.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvNhaPhanPhoi.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -132,11 +132,13 @@
             this.dgvNhaPhanPhoi.ThemeStyle.RowsStyle.Height = 22;
             this.dgvNhaPhanPhoi.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvNhaPhanPhoi.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvNhaPhanPhoi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaPhanPhoi_CellClick);
             // 
             // Panel2
             // 
             this.Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Panel2.Controls.Add(this.btnLamMoi);
             this.Panel2.Controls.Add(this.txtDiaChi);
             this.Panel2.Controls.Add(this.btnSua);
             this.Panel2.Controls.Add(this.btnThem);
@@ -149,11 +151,30 @@
             this.Panel2.Location = new System.Drawing.Point(22, 12);
             this.Panel2.Name = "Panel2";
             this.Panel2.ShadowDecoration.Parent = this.Panel2;
-            this.Panel2.Size = new System.Drawing.Size(793, 229);
+            this.Panel2.Size = new System.Drawing.Size(947, 229);
             this.Panel2.TabIndex = 0;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLamMoi.BorderRadius = 12;
+            this.btnLamMoi.CheckedState.Parent = this.btnLamMoi;
+            this.btnLamMoi.CustomImages.Parent = this.btnLamMoi;
+            this.btnLamMoi.FillColor = System.Drawing.Color.DarkOrange;
+            this.btnLamMoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.HoverState.Parent = this.btnLamMoi;
+            this.btnLamMoi.Location = new System.Drawing.Point(705, 181);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.ShadowDecoration.Parent = this.btnLamMoi;
+            this.btnLamMoi.Size = new System.Drawing.Size(169, 42);
+            this.btnLamMoi.TabIndex = 63;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // txtDiaChi
             // 
+            this.txtDiaChi.AcceptsReturn = true;
             this.txtDiaChi.BorderColor = System.Drawing.Color.SteelBlue;
             this.txtDiaChi.BorderRadius = 10;
             this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -169,15 +190,16 @@
             this.txtDiaChi.ForeColor = System.Drawing.Color.Black;
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
-            this.txtDiaChi.Location = new System.Drawing.Point(211, 125);
+            this.txtDiaChi.Location = new System.Drawing.Point(234, 134);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.PasswordChar = '*';
+            this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtDiaChi.PlaceholderText = "";
+            this.txtDiaChi.PlaceholderText = "Địa chỉ";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
-            this.txtDiaChi.Size = new System.Drawing.Size(222, 70);
+            this.txtDiaChi.Size = new System.Drawing.Size(344, 70);
             this.txtDiaChi.TabIndex = 62;
             // 
             // btnSua
@@ -190,12 +212,13 @@
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.HoverState.Parent = this.btnSua;
-            this.btnSua.Location = new System.Drawing.Point(551, 165);
+            this.btnSua.Location = new System.Drawing.Point(705, 125);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
             this.btnSua.Size = new System.Drawing.Size(169, 42);
             this.btnSua.TabIndex = 61;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -207,12 +230,13 @@
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.HoverState.Parent = this.btnThem;
-            this.btnThem.Location = new System.Drawing.Point(551, 25);
+            this.btnThem.Location = new System.Drawing.Point(705, 13);
             this.btnThem.Name = "btnThem";
             this.btnThem.ShadowDecoration.Parent = this.btnThem;
-            this.btnThem.Size = new System.Drawing.Size(169, 44);
+            this.btnThem.Size = new System.Drawing.Size(169, 42);
             this.btnThem.TabIndex = 50;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -224,19 +248,20 @@
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.HoverState.Parent = this.btnXoa;
-            this.btnXoa.Location = new System.Drawing.Point(551, 95);
+            this.btnXoa.Location = new System.Drawing.Point(705, 69);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(169, 44);
+            this.btnXoa.Size = new System.Drawing.Size(169, 42);
             this.btnXoa.TabIndex = 51;
             this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // lblDiaChi
             // 
             this.lblDiaChi.BackColor = System.Drawing.Color.Transparent;
             this.lblDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiaChi.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblDiaChi.Location = new System.Drawing.Point(55, 125);
+            this.lblDiaChi.Location = new System.Drawing.Point(55, 134);
             this.lblDiaChi.Name = "lblDiaChi";
             this.lblDiaChi.Size = new System.Drawing.Size(55, 20);
             this.lblDiaChi.TabIndex = 49;
@@ -259,15 +284,15 @@
             this.txtTenNPP.ForeColor = System.Drawing.Color.Black;
             this.txtTenNPP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNPP.HoverState.Parent = this.txtTenNPP;
-            this.txtTenNPP.Location = new System.Drawing.Point(211, 74);
+            this.txtTenNPP.Location = new System.Drawing.Point(234, 74);
             this.txtTenNPP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenNPP.Name = "txtTenNPP";
-            this.txtTenNPP.PasswordChar = '*';
+            this.txtTenNPP.PasswordChar = '\0';
             this.txtTenNPP.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtTenNPP.PlaceholderText = "";
+            this.txtTenNPP.PlaceholderText = "Tên nhà phân phối";
             this.txtTenNPP.SelectedText = "";
             this.txtTenNPP.ShadowDecoration.Parent = this.txtTenNPP;
-            this.txtTenNPP.Size = new System.Drawing.Size(222, 36);
+            this.txtTenNPP.Size = new System.Drawing.Size(258, 36);
             this.txtTenNPP.TabIndex = 48;
             // 
             // txtMaNPP
@@ -287,15 +312,15 @@
             this.txtMaNPP.ForeColor = System.Drawing.Color.Black;
             this.txtMaNPP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaNPP.HoverState.Parent = this.txtMaNPP;
-            this.txtMaNPP.Location = new System.Drawing.Point(211, 23);
+            this.txtMaNPP.Location = new System.Drawing.Point(234, 23);
             this.txtMaNPP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaNPP.Name = "txtMaNPP";
-            this.txtMaNPP.PasswordChar = '*';
+            this.txtMaNPP.PasswordChar = '\0';
             this.txtMaNPP.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtMaNPP.PlaceholderText = "";
+            this.txtMaNPP.PlaceholderText = "Mã nhà phân phối";
             this.txtMaNPP.SelectedText = "";
             this.txtMaNPP.ShadowDecoration.Parent = this.txtMaNPP;
-            this.txtMaNPP.Size = new System.Drawing.Size(222, 36);
+            this.txtMaNPP.Size = new System.Drawing.Size(258, 36);
             this.txtMaNPP.TabIndex = 48;
             // 
             // lblTenNPP
@@ -324,7 +349,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 531);
+            this.ClientSize = new System.Drawing.Size(991, 696);
             this.Controls.Add(this.Panel1);
             this.Name = "frmNhaPhanPhoi";
             this.Text = "frmNhaPhanPhoi";
@@ -341,7 +366,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel Panel1;
         private Guna.UI2.WinForms.Guna2Panel Panel3;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvNhaPhanPhoi;
         private Guna.UI2.WinForms.Guna2Panel Panel2;
         internal Guna.UI2.WinForms.Guna2Button btnSua;
         internal Guna.UI2.WinForms.Guna2Button btnThem;
@@ -352,5 +376,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaNPP;
         internal Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
         internal Guna.UI2.WinForms.Guna2TextBox txtTenNPP;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvNhaPhanPhoi;
+        internal Guna.UI2.WinForms.Guna2Button btnLamMoi;
     }
 }

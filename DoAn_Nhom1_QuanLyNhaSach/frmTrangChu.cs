@@ -12,9 +12,14 @@ namespace DoAn_Nhom1_QuanLyNhaSach
 {
     public partial class frmTrangChu : Form
     {
-        public frmTrangChu()
+        DBConnect db = new DBConnect();
+        private string username;
+        private string role;
+        public frmTrangChu(string username, string role)
         {
             InitializeComponent();
+            this.username = username;
+            this.role = role;
         }
 
         private void btnToggle_Click(object sender, EventArgs e)
@@ -110,21 +115,55 @@ namespace DoAn_Nhom1_QuanLyNhaSach
             container(new frmChiTietHoaDon());
         }
 
-        private void btnChiTietPhieuNhap_Click(object sender, EventArgs e)
-        {
-            labelTitleFrm.Text = "QUẢN LÝ CHI TIẾT PHIẾU NHẬP";
-            container(new frmChiTietPhieuNhap());
-        }
+        //private void btnChiTietPhieuNhap_Click(object sender, EventArgs e)
+        //{
+        //    labelTitleFrm.Text = "QUẢN LÝ CHI TIẾT PHIẾU NHẬP";
+        //    container(new frmChiTietPhieuNhap());
+        //}
 
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
             ShadowForm1.SetShadowForm(this);
             btnTrangChu_Click(sender, e);
+
+            if (role == "Admin")
+            {
+                lblQuyen.Text = "Quản trị viên";
+            }
+            else if (role == "NhanVien")
+            {
+                lblQuyen.Text = "Nhân viên";
+            }
+            lblTenUser.Text = username;
         }
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
+            labelTitleFrm.Text = "TRANG CHỦ";
             container(new frmPoster());
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            labelTitleFrm.Text = "ĐỔI MẬT KHẨU";
+            container(new frmDoiMatKhau(role));
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            labelTitleFrm.Text = "THỐNG KÊ";
+            container(new frmThongKe());
+        }
+
+        private void btnBanHang_Click(object sender, EventArgs e)
+        {
+            labelTitleFrm.Text = "BÁN HÀNG";
+            container(new frmBanHang());
         }
     }
 }
