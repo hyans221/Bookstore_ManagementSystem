@@ -1,9 +1,5 @@
 # Bookstore Management System
 
-## Overview
-
-The **Bookstore Management System** is a software project developed to streamline the management of book sales, inventory, suppliers, and customer information within a bookstore environment. The system automates key business processes such as sales tracking, inventory management, supplier coordination, and financial reporting, ultimately enhancing operational efficiency and improving the customer experience.
-
 ## Features
 
 - **Book Management**: Add, edit, delete, and display books with details like title, author, category, publisher, price, and stock levels.
